@@ -12,18 +12,18 @@ int main()
 
 	while (Sair != "s")
 	{
-		cout << "Escolhe o número do carro: ";
+		cout << "Escolhe o nÃºmero do carro: ";
 		cin >> N;
 
 		if (N < 3 && N > 0)
 		{
-			cout << "\nO carro número " << N << " é um " << carros[N];
+			cout << "\nO carro nÃºmero " << N << " Ã© um " << carros[N];
 			cout << "\n\nDeseija sair (s/n)\n";
 			cin >> Sair;
 		}
 		else
 		{
-			cout << "\nNão há um carro número "<<N<<"\n";
+			cout << "\nNÃ£o hÃ¡ um carro nÃºmero "<<N<<"\n";
 		}
 	}
 	return 0;
