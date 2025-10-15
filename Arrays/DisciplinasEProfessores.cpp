@@ -7,8 +7,8 @@ int main()
 	setlocale(LC_ALL, "Portuguese");
 	int n;
 	char sair = 'n';
-	string disciplinas[9] = { "Matemática", "Português", "EDF", "TIC", "TLP", "ACSO", "AI", "Inglês", "Fq" };
-	string Professores[9] = { "Luís", "Alice", "Sérgio", "Clara", "Clara", "Joao", "Maria", "Paula", "Marta" };
+	string disciplinas[9] = { "MatemÃ¡tica", "PortuguÃªs", "EDF", "TIC", "TLP", "ACSO", "AI", "InglÃªs", "Fq" };
+	string Professores[9] = { "LuÃ­s", "Alice", "SÃ©rgio", "Clara", "Clara", "Joao", "Maria", "Paula", "Marta" };
 
 
 	while (sair == 'n')
@@ -18,9 +18,9 @@ int main()
 
 		if (n > 0 && n < 9)
 		{
-			cout << "Sua disciplina é " << disciplinas[n] << " com o professor " << Professores[n];
+			cout << "Sua disciplina Ã© " << disciplinas[n] << " com o professor " << Professores[n];
 
-			cout << "\n\nAs disciplinas são: ";
+			cout << "\n\nAs disciplinas sÃ£o: ";
 
 			for (int i = 0; i < 9; i++)
 			{
@@ -34,9 +34,10 @@ int main()
 		else
 		{
 
-			cout << "\nSua disciplina não existe";
+			cout << "\nSua disciplina nÃ£o existe";
 		}
 
 	}
+
 
 }
