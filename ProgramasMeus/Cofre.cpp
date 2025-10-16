@@ -81,4 +81,5 @@ int main()
     std::cout << "🎉  Boa! Conseguiste robuar o cofre sem seres apanhado! 🎉";
     return 0;
 
+
 }
