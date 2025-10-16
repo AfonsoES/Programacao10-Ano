@@ -12,14 +12,25 @@ int main()
     srand(time(0));
 
     //Escolher a palavra.
-    int NPalavra = rand() % 100;
-    string Palavras[30] = {
+       int NPalavra = rand() % 100;
+    string Palavras[100] = {
         "amigo", "barco", "caixa", "dente", "feira",
         "gente", "horas", "inicio", "junto", "limao",
         "mudar", "nuvem", "otimo", "parte", "quase",
         "roupa", "sinal", "tarde", "mundo", "vento",
         "volta", "zebra", "brisa", "chave", "doido",
-        "longe", "folga", "grato", "horta", "jogue"
+        "longe", "folga", "grato", "horta", "jogue",
+        "livro", "banco", "prato", "plano", "campo",
+        "troca", "limpo", "ponto", "banho", "velho",
+        "festa", "noite", "calma", "reino", "tigre",
+        "verbo", "vinho", "nobre", "carro", "rival",
+        "salto", "pedra", "linha", "carta", "gosto",
+        "leite", "beijo", "senha", "cegas", "sorte",
+        "passe", "ceder", "andar", "navio", "risco",
+        "chefe", "piano", "torre", "fecho", "farda",
+        "botao", "livre", "farol", "fosco", "vento",
+        "vazio", "molho", "sonho", "exato", "feito",
+        "verde", "fundo", "pouco", "lunar", "morro"
     };
 
     string Palavra = Palavras[NPalavra];
@@ -116,3 +127,4 @@ int main()
     return 0;
 
 }
+
