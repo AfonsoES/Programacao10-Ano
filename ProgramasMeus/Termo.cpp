@@ -12,7 +12,7 @@ int main()
     srand(time(0));
 
     //Escolher a palavra.
-    int NPalavra = rand() % 31;
+    int NPalavra = rand() % 100;
     string Palavras[30] = {
         "amigo", "barco", "caixa", "dente", "feira",
         "gente", "horas", "inicio", "junto", "limao",
@@ -30,7 +30,7 @@ int main()
 
 
 
-                     //Perguntar a palavra e ver quais letras estão certas	
+                     //Perguntar a palavra e ver quais letras estÃ£o certas	
     int Certas = 0;
     string Guess = "";
     string LetrasGuess[5] = {};
@@ -112,6 +112,7 @@ int main()
 
 
 
-    cout << "\n\nParabéns!!";
+    cout << "\n\nParabÃ©ns!!";
     return 0;
+
 }
