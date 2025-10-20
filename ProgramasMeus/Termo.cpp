@@ -80,7 +80,7 @@ int main()
 
 
 
-        cout << "\n\nEscreve uma palarva, letras todas minusculas e sem acentos: ";
+        cout << "\n\nEscreve uma palavra, letras todas minusculas e sem acentos: ";
         cin >> Guess;
 
 
@@ -127,4 +127,5 @@ int main()
     return 0;
 
 }
+
 
