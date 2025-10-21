@@ -39,10 +39,11 @@ int main()
 			}
 			else
 			{
-				cout << "\nAcertaste mas até a minah avó acertva em menso de "<<tentativas<<" tentativas";
+				cout << "\nAcertaste mas até a minha avó acertva em menos de "<<tentativas<<" tentativas";
 			}
 
 		}
+
 	}
 
 
