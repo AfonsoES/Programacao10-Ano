@@ -14,7 +14,7 @@ int main()
 
 	for (int i = 0; i < 11; i++)
 	{
-		cout << "\33[94mEscolhe um número: \33[95m";
+		cout << "\33[94mEscolhe um nÃºmero: \33[95m";
 		cin >> n;
 		if (n < 0)
 		{
@@ -24,16 +24,16 @@ int main()
 
 	}
 
-	cout << "\n\n\33[0mQueres saber quantos números negativo meteste \33[31m(1) \33[0mou a soma deles \33[31m(2)\33[0m?: ";
+	cout << "\n\n\33[0mQueres saber quantos nÃºmeros negativo meteste \33[31m(1) \33[0mou a soma deles \33[31m(2)\33[0m?: ";
 	cin >> r;
 
 	if (r == 1)
 	{
-		cout << "\nMeteste \33[96m" << quantos << " \33[0mnúmeros negativos\n";
+		cout << "\nMeteste \33[96m" << quantos << " \33[0mnÃºmeros negativos\n";
 	}
 	else if (r == 2)
 	{
-		cout << "A soma dos números negativos é \33[93m" << soma << "\n\33[0m";
+		cout << "A soma dos nÃºmeros negativos Ã© \33[93m" << soma << "\n\33[0m";
 	}
 	else
 	{
