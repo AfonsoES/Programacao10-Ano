@@ -15,16 +15,16 @@ int main()
 	if (tipo == 'C')
 	{
 		convert = (graus * 1.8) + 32;
-		cout << "\n" << graus << "Cº = " << convert << "Fº\n";
+		cout << "\n" << graus << "CÂº = " << convert << "FÂº\n";
 	}
 	else if (tipo == 'F')
 	{
 		convert = (graus - 32) / 1.8;
-		cout << "\n" << graus << "Fº = " << convert << "Cº\n";
+		cout << "\n" << graus << "FÂº = " << convert << "CÂº\n";
 	}
 	else
 	{
-		cout << "Tipo não aceite\n";
+		cout << "Tipo nÃ£o aceite\n";
 	}
 
 	return 0;
