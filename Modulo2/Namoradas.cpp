@@ -33,12 +33,12 @@ int main()
 		}
 		else if(n>4)
 		{
-			cout << "\nNão tens tantas/os namoradas/os :/";
+			cout << "\nNÃ£o tens tantas/os namoradas/os :/";
 
 		}
 		else
 		{
-			cout << "\nNão há pessoas negativas :/";
+			cout << "\nNÃ£o hÃ¡ pessoas negativas :/";
 		}
 		cout << "\n\nDeseja sair (s/n)";
 		cin >> sair;
