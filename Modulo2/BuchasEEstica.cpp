@@ -10,7 +10,7 @@ int main()
 
 	do
 	{
-		cout << "Escreveum número: ";
+		cout << "Escreveum nÃºmero: ";
 		cin >> N;
 
 		if (N < menor && N != 0)
@@ -24,8 +24,8 @@ int main()
 
 	} while (N != 0);
 
-	cout << "O maior número é: \33[96m" << maior << "\n\33[0m";
-	cout << "O menor número é: \33[91m" << menor << "\n\33[0m";
+	cout << "O maior nÃºmero Ã©: \33[96m" << maior << "\n\33[0m";
+	cout << "O menor nÃºmero Ã©: \33[91m" << menor << "\n\33[0m";
 
 
 	return 0;
