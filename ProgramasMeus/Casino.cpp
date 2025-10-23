@@ -15,17 +15,17 @@ int main()
 	char Ajogar = 'n';
 	char sair = 'n';
 
-	cout << "\33[0mOlá, seja bem-vindo/a ao \33[33mCasino C++\33[0m!\n";
+	cout << "\33[0mOlÃ¡, seja bem-vindo/a ao \33[33mCasino C++\33[0m!\n";
 
 
 	while (sair == 'n')
 	{
-		//Introdução
+		//IntroduÃ§Ã£o
 		int jogo;
 
 		cout << "Que jogo quer jogar: \n";
 		cout << "\33[35m1. Cara ou Coroa\n2. Slots\n3. Roleta (coming soon)\n\33[0m";
-		cout << "Insira o número do jogo: ";
+		cout << "Insira o nÃºmero do jogo: ";
 		cin >> jogo;
 		Ajogar = 's';
 
@@ -35,20 +35,20 @@ int main()
 			if (jogo == 1)
 			{
 
-				//1º jogo Cara ou Coroa
+				//1Âº jogo Cara ou Coroa
 				int CaraOuCoroa = (rand() % 2) + 1;
 				int guess;
 				float aposta;
 
 				cout << "Saldo: \33[92m$" << Dinheiro << "\n\n\33[0m";
 
-				cout << "Bem-vindo/a ao Cara Ou Coroa! \nBasta escolher a lado que quer e se calhar esse lada ganha caso contrário perde.";
+				cout << "Bem-vindo/a ao Cara Ou Coroa! \nBasta escolher a lado que quer e se calhar esse lada ganha caso contrÃ¡rio perde.";
 				cout << "\nQuanto quer apostar?\n";
 				cin >> aposta;
 
 				if (aposta > Dinheiro)
 				{
-					cout << "Não tem dinheiro suficiente.\nA voltar ao inicio";
+					cout << "NÃ£o tem dinheiro suficiente.\nA voltar ao inicio";
 					Ajogar = 'n';
 					Sleep(2000);
 					system("cls");
@@ -62,18 +62,18 @@ int main()
 					system("cls");
 					break;
 				}
-				cout<<"\nEntão Cara(1) ou Coroa(2) ? \n";
+				cout<<"\nEntÃ£o Cara(1) ou Coroa(2) ? \n";
 				cin >> guess;
 
 				if (guess == CaraOuCoroa)
 				{
 					Dinheiro = Dinheiro + aposta * 1.8;
-					cout << "\n\nParabéns, agora tem \33[92m$" << Dinheiro << "\n\33[0m";
+					cout << "\n\nParabÃ©ns, agora tem \33[92m$" << Dinheiro << "\n\33[0m";
 				}
 				else
 				{
 					Dinheiro = Dinheiro - aposta * 0.5;
-					cout << "\n\nQue pena, agora só tem \33[92m$" << Dinheiro << "\n\33[0m";
+					cout << "\n\nQue pena, agora sÃ³ tem \33[92m$" << Dinheiro << "\n\33[0m";
 				}
 
 			cout << "\nDeseja jogar outra vez? (s/n)";
@@ -99,12 +99,12 @@ int main()
 
 		cout << "Saldo: \33[92m$" << Dinheiro << "\n\n\33[0m";
 
-		cout << "Bem-vindo/a aos Slots! \nBasta escolher quanto quer apostar se calharem 3 caras iguais ganha, se calharem 2 fica com o dinheiro e se não calhar nenhuma perde tudo.\nEntão quanto quer apostar?\n";
+		cout << "Bem-vindo/a aos Slots! \nBasta escolher quanto quer apostar se calharem 3 caras iguais ganha, se calharem 2 fica com o dinheiro e se nÃ£o calhar nenhuma perde tudo.\nEntÃ£o quanto quer apostar?\n";
 		cin >> aposta;
 
 		if (aposta>Dinheiro)
 		{
-			cout << "Não tem dinheiro suficiente.\nA voltar ao inicio";
+			cout << "NÃ£o tem dinheiro suficiente.\nA voltar ao inicio";
 			Ajogar = 'n';
 			Sleep(2000);
 			system("cls");
@@ -138,12 +138,12 @@ int main()
 		}
 		else if (Slot1 == Slot2 || Slot1 == Slot3 || Slot3 == Slot2)
 		{
-			cout << "Mais sorte para a proxima. Não ganhou nem perdeu.\n";
+			cout << "Mais sorte para a proxima. NÃ£o ganhou nem perdeu.\n";
 		}
 		else
 		{			
 			Dinheiro = Dinheiro - aposta;
-			cout << "Que azar. Perdeu tudo oque apostou, agora só tem \33[92m$" << Dinheiro << "\n\33[0m";
+			cout << "Que azar. Perdeu tudo oque apostou, agora sÃ³ tem \33[92m$" << Dinheiro << "\n\33[0m";
 		} 
 
 		cout << "\nDeseja jogar outra vez? (s/n)";
@@ -175,12 +175,119 @@ int main()
 	"\33[90m[ ]                           \33[90m[ ]    ",
 	"   \33[91m[ ]                     \33[91m[ ]    ",
 	"      \33[90m[ ]               \33[90m[ ]    ",
-	"         \33[91m[ ]\33[90m[ ]\33[92m[o]\33[90m[ ]\33[91m[ ]   "
+	"         \33[91m[ ]\33[90m[ ]\33[92m[\33[97mo\33[92m]\33[90m[ ]\33[91m[ ]   "
 		},
+				{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[\33[97mo\33[90m]\33[91m[ ]   "
+		},
+						{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[\33[97mo\33[91m]   "
+		},
+								{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[\33[97mo\33[90m]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[ ]   "
+		},
+										{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[\33[97mo\33[91m]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[ ]   "
+		},
+												{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[\33[97mo\33[90m]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[ ]   "
+		},
+														{
+	"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[\33[97mo\33[91m]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[ ]   "
+		},
+		{
+			"         \33[91m[ ]\33[90m[ ]\33[91m[ ]\33[90m[ ]\33[91m[ ]   ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"\33[90m[ ]                          \33[90m [ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[\33[97mo\33[90m]    ",
+	"\33[91m[ ]                           \33[91m[ ]    ",
+	"\33[90m[ ]                           \33[90m[ ]    ",
+	"   \33[91m[ ]                     \33[91m[ ]    ",
+	"      \33[90m[ ]               \33[90m[ ]    ",
+	"         \33[91m[ ]\33[90m[ ]\33[92m[ ]\33[90m[ ]\33[91m[ ]   "
+		}
+	
+		};
 	
 		};
 
-		cout << "Bem-vindo/a a Roleta!\n Para jogar é só escolher uma cor preto, vermelho ou verde.\nSe acertar ganha 1.5x a aposta e se acertar o verde ganha 3x.\n";
+		cout << "Bem-vindo/a a Roleta!\n Para jogar Ã© sÃ³ escolher uma cor preto, vermelho ou verde.\nSe acertar ganha 1.5x a aposta e se acertar o verde ganha 3x.\n";
 
 
 		for (int d = 0; d < 1; ++d) {
@@ -198,9 +305,10 @@ int main()
 	}
 	if (jogo < 0 || jogo > 3)
 	{
-		cout << "Esse jogo não existe.\nA voltar ao inicio";
+		cout << "Esse jogo nÃ£o existe.\nA voltar ao inicio";
 		Ajogar = 'n';
 		Sleep(2000);
+
 		system("cls");
 	}
 	}
