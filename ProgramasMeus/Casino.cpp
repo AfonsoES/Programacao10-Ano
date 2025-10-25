@@ -677,7 +677,7 @@ int main()
 					break;
 			}
 			int LugarBolaAGirar = Roleta + 1;;
-			for (int i = 0; i < 62; i++) {
+			for (int i = 0; i < 31; i++) {
 				LugarBolaAGirar++;
 				if (LugarBolaAGirar >= 32)
 				{
@@ -687,7 +687,7 @@ int main()
 				for (int linha = 0; linha < 13; ++linha) {
 					cout << desenhos[LugarBolaAGirar][linha] <<"\n";
 				}
-				Sleep(6*i);
+				Sleep(13*i);
 				system("cls");
 			}
 			cout << "             \33[92m|DONE|\33[0m\n";
@@ -758,3 +758,4 @@ int main()
 }
 return 0;
 }
+
