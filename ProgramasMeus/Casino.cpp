@@ -24,7 +24,7 @@ int main()
 		int jogo;
 
 		cout << "Que jogo quer jogar: \n";
-		cout << "\33[35m1. Cara ou Coroa\n2. Slots\n3. Roleta (coming soon)\n\33[0m";
+		cout << "\33[35m1. Cara ou Coroa\n2. Slots\n3. Roleta(NEW)\n\33[0m";
 		cout << "Insira o número do jogo: ";
 		cin >> jogo;
 		Ajogar = 's';
@@ -123,12 +123,12 @@ int main()
 				{
 					int Slot1Show = rand() % 5, Slot2Show = rand() % 5, Slot3Show = rand() % 5;
 					string Slot1CaraShow = caras[Slot1Show], Slot2CaraShow = caras[Slot2Show], Slot3CaraShow = caras[Slot3Show];
-					cout << "\33[91m|A GIRAR|\33[0m\n";
+					cout << "\33[91m|A  GIRAR|\33[0m\n";
 					cout << "|" << Slot1CaraShow << "|" << Slot2CaraShow << "|" << Slot3CaraShow << "|";
 					Sleep(10 * i);
 					system("cls");
 				}
-				cout << "\33[92m|DONE|\33[0m\n";
+				cout << "  \33[92m|DONE|\33[0m\n";
 				cout << "|" << Slot1Cara << "|" << Slot2Cara << "|" << Slot3Cara << "|\n\n";
 
 				if (Slot1 == Slot2 == Slot3)
@@ -645,6 +645,7 @@ int main()
 			},
 				};
 
+			cout << "Saldo: \33[92m$" << Dinheiro << "\n\n\33[0m";
 			
 			cout << "Bem-vindo/a a Roleta!\nPara jogar é só escolher uma cor preto, vermelho ou verde.\nSe acertar ganha 1.5x a aposta e se acertar o verde ganha 3x.\nQuanto quer apostar: ";
 			cin >> aposta;
@@ -675,26 +676,73 @@ int main()
 					system("cls");
 					break;
 			}
-
-			for (int i = Roleta-32; i < Roleta; i++) {
-				if (i < 1)
+			int LugarBolaAGirar = Roleta + 1;;
+			for (int i = 0; i < 62; i++) {
+				LugarBolaAGirar++;
+				if (LugarBolaAGirar >= 32)
 				{
-					i = 0;
+					LugarBolaAGirar = 0;
 				}
+				cout << "            \33[91m|A GIRAR|\33[0m\n";
 				for (int linha = 0; linha < 13; ++linha) {
-					cout << desenhos[i][linha] <<"\n";
+					cout << desenhos[LugarBolaAGirar][linha] <<"\n";
 				}
-				Sleep(10*i);
+				Sleep(6*i);
 				system("cls");
 			}
+			cout << "             \33[92m|DONE|\33[0m\n";
 			for (int linha = 0; linha < 13; ++linha) {
 				cout << desenhos[Roleta][linha] << "\n";
 			}
-			cout << "YAY";
-			Sleep(20000);
+			if (Roleta == 0)
+			{
+				if (Escolha == 1)
+				{
+					Dinheiro = Dinheiro + aposta * 3;
+					cout << "\33[0mWOW! Acertas te que a bola ia cair no verde! Agora tens \33[92m$" << Dinheiro << "\33[0m!";
+				}
+				else
+				{
+					Dinheiro = Dinheiro - aposta;
+					cout << "\33[0mQue pena. Erraste onde a bola ia cair. Agora só tens \33[92m$" << Dinheiro << "\33[0m.";
+				}
+			}
+			else if (Roleta % 2 == 0)
+			{
+				if (Escolha == 2)
+				{
+					Dinheiro = Dinheiro + aposta * 1.5;
+					cout << "\33[0mBoa! Acertas te que a bola ia cair no vermelho! Agora tens \33[92m$" << Dinheiro << "\33[0m!";
+				}
+				else
+				{
+					Dinheiro = Dinheiro - aposta;
+					cout << "\33[0mQue pena. Erraste onde a bola ia cair. Agora só tens \33[92m$" << Dinheiro << "\33[0m.";
+				}
+			}
+			else if (Roleta % 2 != 0)
+			{
+				if (Escolha == 3)
+				{
+					Dinheiro = Dinheiro + aposta * 1.5;
+					cout << "\33[0mBoa! Acertas te que a bola ia cair no preto! Agora tens \33[92m$" << Dinheiro << "\33[0m!";
+				}
+				else
+				{
+					Dinheiro = Dinheiro - aposta;
+					cout << "\33[0mQue pena. Erraste onde a bola ia cair. Agora só tens \33[92m$" << Dinheiro << "\33[0m.";
+				}
+			}
+			cout << "\nDeseja jogar outra vez? (s/n)";
+			cin >> Ajogar;
+
+			if (Ajogar == 'n')
+			{
+				cout << "Deseja sair? (s/n)";
+				cin >> sair;
+				system("cls");
+			}
 			
-
-
 
 		}
 		if (jogo < 0 || jogo > 3)
