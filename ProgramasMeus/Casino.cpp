@@ -24,7 +24,7 @@ int main()
 		int jogo;
 
 		cout << "Que jogo quer jogar: \n";
-		cout << "\33[35m1. Cara ou Coroa\n2. Slots\n3. Roleta(NEW)\n\33[0m";
+		cout << "\33[35m1. Cara ou Coroa\n2. Slots\n3. Roleta (\33[96mN\33[92mE\33[91mW\33[35m)\n\33[0m";
 		cout << "Insira o número do jogo: ";
 		cin >> jogo;
 		Ajogar = 's';
@@ -758,4 +758,5 @@ int main()
 }
 return 0;
 }
+
 
