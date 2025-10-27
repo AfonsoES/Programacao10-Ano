@@ -9,7 +9,7 @@ int main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	srand(time(0));
-	int nums[5], guess[5];
+	int nums[5], guess[5], Troca, Aux, Certos=0;
 
 
 	for (int i = 0; i < 5; i++)
@@ -22,24 +22,63 @@ int main()
 				if (nums[i] == nums[ii])
 				{
 					nums[i] = (rand() % 50) + 1;
-					cout << nums[i];
 				}
 			}
 		}
-		cout << nums[i]<<"\n";
 	}
+
+	do
+	{
+		Troca = 0;
+
+		for (int i = 0; i < 4; i++)
+		{
+			if (nums[i] > nums[i + 1])
+			{
+				Troca++;
+				Aux = nums[i];
+				nums[i] = nums[i + 1];
+				nums[i + 1] = Aux;
+			}
+		}
+
+	} while (Troca != 0);
+
 
 	for (int i = 0; i < 5; i++)
 	{
-		cout << "Escolhe um n�mero entre 1 e 50: ";
+		cout << "Escolhe um número entre 1 e 50: ";
 		cin >> guess[i];
 		while (guess[i] < 1 || guess[i] > 50)
 		{
-			cout << "O n�mero tem de ser entre 1 e 50: ";
+			cout << "O número tem de ser entre 1 e 50: ";
 			cin >> guess[i];
 		}
 	}
 
+	for (int i = 0; i < 5; i++)
+	{
+		if (nums[i] == guess[i])
+		{
+			Certos++;
+		}
+	}
+
+	if (Certos == 5)
+	{
+		cout << "BRAVO, GANHASTE 1 MILHÃO DE BITCOIN\n";
+	}
+	else
+	{
+		cout << "\nNão ganhaste a loteria. Só acertaste" << Certos << "\n";
+	}
+
+	cout << "Os números certos são: \n";
+	for (int i=0;i<4;i++)
+	{
+		cout << nums[i] << " | ";
+	}
+	cout << nums[4];
 
 	return 0;
 }
