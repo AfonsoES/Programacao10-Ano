@@ -17,12 +17,9 @@ int main()
 		nums[i] = (rand() % 50) + 1;
 		for (int ii = 0; ii < 5; ii++)
 		{
-			if (i != ii)
+			while (nums[i] == nums[ii])
 			{
-				if (nums[i] == nums[ii])
-				{
-					nums[i] = (rand() % 50) + 1;
-				}
+				nums[i] = (rand() % 50) + 1;
 			}
 		}
 	}
