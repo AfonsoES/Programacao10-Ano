@@ -28,7 +28,7 @@ int main()
 					if (lotaria[i] == lotaria[ii + 1])
 					{
 						lotaria[i] = (rand() % 50) + 1;
-						++iguais;
+						iguais++;
 					}
 				}
 			}
@@ -90,4 +90,5 @@ int main()
 
 	return 0;
 }
+
 
