@@ -15,14 +15,25 @@ int main()
 	for (int i = 0; i < 5; i++)
 	{
 		nums[i] = (rand() % 50) + 1;
-		for (int ii = 0; ii < 5; ii++)
+	}
+	do
+	{
+		int iguais = 0;
+		for (int i = 0; j < 4; ++j)
 		{
-			while (nums[i] == nums[ii])
+			for (int ii = 0; i < 4; ++i)
 			{
-				nums[i] = (rand() % 50) + 1;
+				if (i != ii + 1)
+				{
+					if (lotaria[i] == lotaria[ii + 1])
+					{
+						lotaria[i] = (rand() % 50) + 1;
+						++iguais;
+					}
+				}
 			}
 		}
-	}
+	} while (iguais != 0);
 
 	do
 	{
@@ -79,3 +90,4 @@ int main()
 
 	return 0;
 }
+
