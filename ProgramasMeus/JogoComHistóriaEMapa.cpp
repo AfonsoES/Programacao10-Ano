@@ -5,10 +5,10 @@
 #include <time.h>
 #include <windows.h>
 using namespace std;
-string inv[100]; //inv[0], È a arma. inv[1], È a armadura. O resto È tudos os itens.
+string inv[100]; //inv[0], √© a arma. inv[1], √© a armadura. O resto √© tudos os itens.
 
-//FunÁ„o para meter um item no invent·rio (ComeÁa do 2 porque inv[0], È a arma. inv[1], È a armadura.
-//Meter na funÁ„o o item que queromos ex.: ("MaÁa")
+//Fun√ß√£o para meter um item no invent√°rio (Come√ßa do 2 porque inv[0], √© a arma. inv[1], √© a armadura.
+//Meter na fun√ß√£o o item que queromos ex.: ("Ma√ßa")
 string novoItem(string item)
 {
 	for (int i = 2; i < 100; i++)
@@ -22,8 +22,8 @@ string novoItem(string item)
 	return " ";
 }
 
-//FunÁ„o para mostrar a vida do player ou do monstro
-//Meter na funÁ„o a variavel da vida e o m·ximo de vida que tem ex.: (vida, 20). N„o esquecer tambÈm de igual a variavel da vida ‡ funÁ„o ex.: vida = coutVida(vida, 20)
+//Fun√ß√£o para mostrar a vida do player ou do monstro
+//Meter na fun√ß√£o a variavel da vida e o m√°ximo de vida que tem ex.: (vida, 20). N√£o esquecer tamb√©m de igual a variavel da vida √† fun√ß√£o ex.: vida = coutVida(vida, 20)
 int coutVida(int Vida, int Max)
 {
 	for (int i = 0; i < Max + 1; i++)
@@ -41,8 +41,8 @@ int coutVida(int Vida, int Max)
 	return Vida;
 }
 
-//FunÁ„o para fazer o mapa
-//Meter na funÁ„o o X e Y do personagem e o nome do mapa
+//Fun√ß√£o para fazer o mapa
+//Meter na fun√ß√£o o X e Y do personagem e o nome do mapa
 string mapa(int x, int y, string nomemapa)
 {
 	if (nomemapa == "normal")
@@ -96,7 +96,7 @@ string mapa(int x, int y, string nomemapa)
 	}
 	cout << "\33[0m\n\n";
 	return "a";
-} //FunÁ„o para fazer o mapa
+} //Fun√ß√£o para fazer o mapa
 
 int main()
 {
@@ -108,7 +108,7 @@ int main()
 	bool fala = false;
 	int keyCode = 0, x = 5, y = 10;
 
-	//FunÁ„o para o mapa
+	//Fun√ß√£o para o mapa
 	mapa(x, y, "normal");
 	while (true)
 	{
@@ -119,7 +119,7 @@ int main()
 			Sleep(150);
 			system("cls");
 			if (y > 0 && !(y == 4 && x == 5)) y--;
-			//FunÁ„o para o mapa
+			//Fun√ß√£o para o mapa
 			mapa(x, y, "normal");
 			//Quando tiver a frente do Peter
 			if (x == 5 && y == 4)
@@ -132,7 +132,7 @@ int main()
 			Sleep(150);
 			system("cls");
 			if (y < 12 && !(y == 2 && x == 5)) y++;
-			//FunÁ„o para o mapa
+			//Fun√ß√£o para o mapa
 			mapa(x, y, "normal");
 		}
 		if (GetKeyState('A') & 0x8000)
@@ -140,7 +140,7 @@ int main()
 			Sleep(150);
 			system("cls");
 			if (x > 2 && !(y == 3 && x == 6)) x--;
-			//FunÁ„o para o mapa
+			//Fun√ß√£o para o mapa
 			mapa(x, y, "normal");
 			//Quando tiver a frente do Peter
 			if (x == 5 && y == 4)
@@ -153,7 +153,7 @@ int main()
 			Sleep(150);
 			system("cls");
 			if (x < 8 && !(y == 3 && x == 4)) x++;
-			//FunÁ„o para o mapa
+			//Fun√ß√£o para o mapa
 			mapa(x, y, "normal");
 			//Quando tiver a frente do Peter
 			if (x == 5 && y == 4)
@@ -169,9 +169,9 @@ int main()
 			fala = true;
 			while (fala)
 			{
-				//HistÛria
+				//Hist√≥ria
 				mapa(x, y, "normal");
-				cout << "\33[90m???\33[0m: Ol· ...";
+				cout << "\33[90m???\33[0m: Ol√° ...";
 				Sleep(2000);
 				system("cls");
 				mapa(x, y, "normal");
@@ -181,14 +181,14 @@ int main()
 				cin >> nome;
 				system("cls");
 				mapa(x, y, "normal");
-				cout << "\33[90mPeter\33[0m: Ol· " << nome << ", eu sou o Peter! Sou um aventureiro e estou numa miss„o para derrotar slimes.";
+				cout << "\33[90mPeter\33[0m: Ol√° " << nome << ", eu sou o Peter! Sou um aventureiro e estou numa miss√£o para derrotar slimes.";
 				Sleep(5000);
 				system("cls");
 				Escolha = 1;
 				mapa(x, y, "normal");
 				cout << "\33[90mPeter\33[0m: Queres ajudar?\n";
 				cout << "\33[100;97m*Sim*\n\33[0m";
-				cout << "\33[97m*N„o*\n\33[0m";
+				cout << "\33[97m*N√£o*\n\33[0m";
 				while (true)
 				{
 					if (GetKeyState(VK_UP) & 0x8000)
@@ -202,13 +202,13 @@ int main()
 						case 1:
 						{
 							cout << "\33[100;97m*Sim*\n\33[0m";
-							cout << "\33[97m*N„o*\n\33[0m";
+							cout << "\33[97m*N√£o*\n\33[0m";
 							break;
 						}
 						case 2:
 						{
 							cout << "\33[97m*Sim*\n\33[0m";
-							cout << "\33[100;97m*N„o*\n\33[0m";
+							cout << "\33[100;97m*N√£o*\n\33[0m";
 							break;
 						}
 						}
@@ -225,13 +225,13 @@ int main()
 						case 1:
 						{
 							cout << "\33[100;97m*Sim*\n\33[0m";
-							cout << "\33[97m*N„o*\n\33[0m";
+							cout << "\33[97m*N√£o*\n\33[0m";
 							break;
 						}
 						case 2:
 						{
 							cout << "\33[97m*Sim*\n\33[0m";
-							cout << "\33[100;97m*N„o*\n\33[0m";
+							cout << "\33[100;97m*N√£o*\n\33[0m";
 							break;
 						}
 						}
@@ -256,7 +256,7 @@ int main()
 					cout << "\33[97m*Escolhe uma arma*\n\33[0m";
 					cout << "\33[100;97m*Espada*\33[0m\n";
 					cout << "\33[97m*Machado*\33[0m\n";
-					cout << "\33[97m*P·*\33[0m\n";
+					cout << "\33[97m*P√°*\33[0m\n";
 					while (true)
 					{
 						if (GetKeyState(VK_UP) & 0x8000)
@@ -270,17 +270,17 @@ int main()
 							case 1:
 								cout << "\33[100;97m*Espada*\33[0m\n";
 								cout << "\33[97m*Machado*\33[0m\n";
-								cout << "\33[97m*P·*\33[0m\n";
+								cout << "\33[97m*P√°*\33[0m\n";
 								break;
 							case 2:
 								cout << "\33[97m*Espada*\33[0m\n";
 								cout << "\33[100;97m*Machado*\33[0m\n";
-								cout << "\33[97m*P·*\33[0m\n";
+								cout << "\33[97m*P√°*\33[0m\n";
 								break;
 							case 3:
 								cout << "\33[97m*Espada*\33[0m\n";
 								cout << "\33[97m*Machado*\33[0m\n";
-								cout << "\33[100;97m*P·*\33[0m\n";
+								cout << "\33[100;97m*P√°*\33[0m\n";
 								break;
 							}
 							Sleep(200);
@@ -296,17 +296,17 @@ int main()
 							case 1:
 								cout << "\33[100;97m*Espada*\33[0m\n";
 								cout << "\33[97m*Machado*\33[0m\n";
-								cout << "\33[97m*P·*\33[0m\n";
+								cout << "\33[97m*P√°*\33[0m\n";
 								break;
 							case 2:
 								cout << "\33[97m*Espada*\33[0m\n";
 								cout << "\33[100;97m*Machado*\33[0m\n";
-								cout << "\33[97m*P·*\33[0m\n";
+								cout << "\33[97m*P√°*\33[0m\n";
 								break;
 							case 3:
 								cout << "\33[97m*Espada*\33[0m\n";
 								cout << "\33[97m*Machado*\33[0m\n";
-								cout << "\33[100;97m*P·*\33[0m\n";
+								cout << "\33[100;97m*P√°*\33[0m\n";
 								break;
 							}
 							Sleep(200);
@@ -320,19 +320,19 @@ int main()
 					{
 					case 1:
 						inv[0] = "Espada";
-						cout << "\33[90mPeter\33[0m: Boa escolha! A espada, uma arma b·sica e f·cil de usar!";
+						cout << "\33[90mPeter\33[0m: Boa escolha! A espada, uma arma b√°sica e f√°cil de usar!";
 						break;
 					case 2:
 						inv[0] = "Machado";
-						cout << "\33[90mPeter\33[0m: Boa escolha! Um machado, nunca sabes quando precisas de cortar uma ·rvore ou os teu inimigos!";
+						cout << "\33[90mPeter\33[0m: Boa escolha! Um machado, nunca sabes quando precisas de cortar uma √°rvore ou os teus inimigos!";
 						break;
 					case 3:
-						inv[0] = "P·";
-						cout << "\33[90mPeter\33[0m: Boa escolha! Uma p·, perfeito para enterrar os teu inimigos!";
+						inv[0] = "P√°";
+						cout << "\33[90mPeter\33[0m: Boa escolha! Uma p√°, perfeito para enterrar os teus inimigos!";
 						break;
 					default:
 						Escolha = 0;
-						cout << "\33[97m*Arma inv·lida*\n\33[0m";
+						cout << "\33[97m*Arma inv√°lida*\n\33[0m";
 						break;
 					}
 					Sleep(10000);
@@ -347,3 +347,4 @@ int main()
 		}
 	}
 }
+
