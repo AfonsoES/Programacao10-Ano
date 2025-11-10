@@ -9,7 +9,7 @@ string inv[100]; //inv[0], é a arma. inv[1], é a armadura. O resto é tudos os
 
 //Função para meter um item no inventário (Começa do 2 porque inv[0], é a arma. inv[1], é a armadura.
 //Meter na função o item que queromos ex.: ("Maça")
-string novoItem(string item)
+void novoItem(string item)
 {
 	for (int i = 2; i < 100; i++)
 	{
@@ -19,7 +19,6 @@ string novoItem(string item)
 			break;
 		}
 	}
-	return " ";
 }
 
 //Função para mostrar a vida do player ou do monstro
@@ -43,7 +42,7 @@ int coutVida(int Vida, int Max)
 
 //Função para fazer o mapa
 //Meter na função o X e Y do personagem e o nome do mapa
-string mapa(int x, int y, string nomemapa)
+void mapa(int x, int y, string nomemapa)
 {
 	if (nomemapa == "normal")
 	{
@@ -58,7 +57,154 @@ string mapa(int x, int y, string nomemapa)
 				}
 				else if (i == 3 && ii == 5)
 				{
-					cout << "\33[48;2;156;90;60m  ";
+					cout << "\33[48;2;238;173;45m  ";
+				}
+				else
+				{
+					switch (ii)
+					{
+					case 0:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					case 1:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 9:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 10:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					default:
+					{
+						cout << "\33[48;2;107;125;105m  ";
+						break;
+					}
+					}
+				}
+			}
+		}
+	}
+	if (nomemapa == "normal2")
+	{
+		for (int i = 0; i < 13; i++)
+		{
+			cout << "\n";
+			for (int ii = 0; ii < 11; ii++)
+			{
+				if (i == y && ii == x)
+				{
+					cout << "\33[48;2;92;51;23m  ";
+				}
+				else if (i == 2 && ii == 5)
+				{
+					cout << "\33[48;2;238;173;45m  ";
+				}
+				else
+				{
+					switch (ii)
+					{
+					case 0:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					case 1:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 9:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 10:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					default:
+					{
+						cout << "\33[48;2;107;125;105m  ";
+						break;
+					}
+					}
+				}
+			}
+		}
+	}
+	if (nomemapa == "normal3")
+	{
+		for (int i = 0; i < 13; i++)
+		{
+			cout << "\n";
+			for (int ii = 0; ii < 11; ii++)
+			{
+				if (i == y && ii == x)
+				{
+					cout << "\33[48;2;92;51;23m  ";
+				}
+				else if (i == 1 && ii == 5)
+				{
+					cout << "\33[48;2;238;173;45m  ";
+				}
+				else
+				{
+					switch (ii)
+					{
+					case 0:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					case 1:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 9:
+					{
+						cout << "\33[48;2;68;79;66m ";
+						break;
+					}
+					case 10:
+					{
+						cout << "\33[48;2;64;64;64m ";
+						break;
+					}
+					default:
+					{
+						cout << "\33[48;2;107;125;105m  ";
+						break;
+					}
+					}
+				}
+			}
+		}
+	}
+	if (nomemapa == "normal4")
+	{
+		for (int i = 0; i < 13; i++)
+		{
+			cout << "\n";
+			for (int ii = 0; ii < 11; ii++)
+			{
+				if (i == y && ii == x)
+				{
+					cout << "\33[48;2;92;51;23m  ";
+				}
+				else if (i == 0 && ii == 5)
+				{
+					cout << "\33[48;2;238;173;45m  ";
 				}
 				else
 				{
@@ -95,7 +241,6 @@ string mapa(int x, int y, string nomemapa)
 		}
 	}
 	cout << "\33[0m\n\n";
-	return "a";
 } //Função para fazer o mapa
 
 int main()
@@ -112,7 +257,7 @@ int main()
 	mapa(x, y, "normal");
 	while (true)
 	{
-		
+
 		//Ifs para andar no mapa
 		if (GetKeyState('W') & 0x8000)
 		{
@@ -161,7 +306,7 @@ int main()
 				cout << "\n\n    (E)Falar\n\n";
 			}
 		}
-		
+
 		//Quando clicar no "E" e tiver a frente do Peter
 		if (GetKeyState('E') & 0x8000 && x == 5 && y == 4)
 		{
@@ -171,22 +316,22 @@ int main()
 			{
 				//História
 				mapa(x, y, "normal");
-				cout << "\33[90m???\33[0m: Olá ...";
+				cout << "\33[93m???\33[0m: Olá ...";
 				Sleep(2000);
 				system("cls");
 				mapa(x, y, "normal");
-				cout << "\33[90m???\33[0m: Hm... Como te chamas?\n";
+				cout << "\33[93m???\33[0m: Hm... Como te chamas?\n";
 				cout << "\33[97m*Escreve o teu nome*\n\33[0m";
 				FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE)); // Para limpar o input 
 				cin >> nome;
 				system("cls");
 				mapa(x, y, "normal");
-				cout << "\33[90mPeter\33[0m: Olá " << nome << ", eu sou o Peter! Sou um aventureiro e estou numa missão para derrotar slimes.";
+				cout << "\33[93mRoberto\33[0m: Olá " << nome << ", eu sou o Roberto! Sou um aventureiro e estou numa missão para derrotar slimes.";
 				Sleep(5000);
 				system("cls");
 				Escolha = 1;
 				mapa(x, y, "normal");
-				cout << "\33[90mPeter\33[0m: Queres ajudar?\n";
+				cout << "\33[93mRoberto\33[0m: Queres ajudar?\n";
 				cout << "\33[100;97m*Sim*\n\33[0m";
 				cout << "\33[97m*Não*\n\33[0m";
 				while (true)
@@ -195,7 +340,7 @@ int main()
 					{
 						system("cls");
 						mapa(x, y, "normal");
-						cout << "\33[90mPeter\33[0m: Queres ajudar?\n";
+						cout << "\33[93mRoberto\33[0m: Queres ajudar?\n";
 						if (Escolha == 2) Escolha--;
 						switch (Escolha)
 						{
@@ -218,7 +363,7 @@ int main()
 					{
 						system("cls");
 						mapa(x, y, "normal");
-						cout << "\33[90mPeter\33[0m: Queres ajudar?\n";
+						cout << "\33[93mRoberto\33[0m: Queres ajudar?\n";
 						if (Escolha == 1) Escolha++;
 						switch (Escolha)
 						{
@@ -246,8 +391,8 @@ int main()
 				{
 					system("cls");
 					mapa(x, y, "normal");
-					cout << "\33[90mPeter\33[0m: Boa!\n";
-					cout << "\33[90mPeter\33[0m: Tenho umas armas a mais na minha mochila escolhe uma!\n";
+					cout << "\33[93mRoberto\33[0m: Boa!\n";
+					cout << "\33[93mRoberto\33[0m: Tenho umas armas a mais na minha mochila escolhe uma!\n";
 					Sleep(1000);
 					system("cls");
 					FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE)); // Para limpar o input 
@@ -320,22 +465,74 @@ int main()
 					{
 					case 1:
 						inv[0] = "Espada";
-						cout << "\33[90mPeter\33[0m: Boa escolha! A espada, uma arma básica e fácil de usar!";
+						cout << "\33[93mRoberto\33[0m: Boa escolha! A espada, uma arma básica e fácil de usar!";
 						break;
 					case 2:
 						inv[0] = "Machado";
-						cout << "\33[90mPeter\33[0m: Boa escolha! Um machado, nunca sabes quando precisas de cortar uma árvore ou os teus inimigos!";
+						cout << "\33[93mRoberto\33[0m: Boa escolha! Um machado, nunca sabes quando precisas de cortar uma árvore ou os teus inimigos!";
 						break;
 					case 3:
 						inv[0] = "Pá";
-						cout << "\33[90mPeter\33[0m: Boa escolha! Uma pá, perfeito para enterrar os teus inimigos!";
+						cout << "\33[93mRoberto\33[0m: Boa escolha! Uma pá, perfeito para enterrar os teus inimigos!";
 						break;
 					default:
 						Escolha = 0;
 						cout << "\33[97m*Arma inválida*\n\33[0m";
 						break;
 					}
-					Sleep(10000);
+					Sleep(1500);
+					system("cls");
+					mapa(x, y, "normal");
+					cout << "\33[93mRoberto\33[0m: Vamos, a floresta dos slimes é por ali!";
+					Sleep(750);
+					system("cls");
+					mapa(x, y, "normal2");
+					Sleep(750);
+					system("cls");
+					mapa(x, y, "normal3");
+					Sleep(750);
+					system("cls");
+					mapa(x, y, "normal4");
+					while (true)
+					{
+
+						//Ifs para andar no mapa
+						if (GetKeyState('W') & 0x8000)
+						{
+							Sleep(150);
+							system("cls");
+							if (y > 0 && !(y == 1 && x == 5)) y--;
+							//Função para o mapa
+							mapa(x, y, "normal4");
+						}
+						if (GetKeyState('S') & 0x8000)
+						{
+							Sleep(150);
+							system("cls");
+							if (y < 12) y++;
+							//Função para o mapa
+							mapa(x, y, "normal4");
+							if (y == 12)cout << "\33[93mRoberto\33[0m: Vens ou não?";;
+						}
+						if (GetKeyState('A') & 0x8000)
+						{
+							Sleep(150);
+							system("cls");
+							if (x > 2 && !(y == 0 && x == 6)) x--;
+							//Função para o mapa
+							mapa(x, y, "normal4");
+							if (y == 12)cout << "\33[93mRoberto\33[0m: Vens ou não?";;
+						}
+						if (GetKeyState('D') & 0x8000)
+						{
+							Sleep(150);
+							system("cls");
+							if (x < 8 && !(y == 0 && x == 4)) x++;
+							//Função para o mapa
+							mapa(x, y, "normal4");
+							if (y == 12)cout << "\33[93mRoberto\33[0m: Vens ou não?";;
+						}
+					}
 				}
 				else
 				{
@@ -347,4 +544,3 @@ int main()
 		}
 	}
 }
-
