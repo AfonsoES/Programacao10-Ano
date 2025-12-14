@@ -9,7 +9,7 @@ int main()
 
 	while (N != 0)
 	{
-		cout << "Escolhe um número: ";
+		cout << "Escolhe um nÃºmero: ";
 		cin >> N;
 
 
@@ -17,24 +17,24 @@ int main()
 		{
 			if (N % 3 == 0)
 			{
-				cout << "O número é multiplo de 3 e 5\n";
+				cout << "O nÃºmero Ã© multiplo de 3 e 5\n";
 			}
 			else
 			{
-					cout << "O número é multiplo de 5\n";
+					cout << "O nÃºmero Ã© multiplo de 5\n";
 			}
 		}
 		else
 		{
 			if (N % 3 == 0)
 			{
-				cout << "O número é multiplo de 3\n";
+				cout << "O nÃºmero Ã© multiplo de 3\n";
 			}
 			else
 			{
-					cout << "O número não é multiplo de 3 nem de 5\n";
+					cout << "O nÃºmero nÃ£o Ã© multiplo de 3 nem de 5\n";
 			}
 		}
 	}
-	cout << "Escreveste 0 - Saíste\n";
+	cout << "Escreveste 0 - SaÃ­ste\n";
 }
