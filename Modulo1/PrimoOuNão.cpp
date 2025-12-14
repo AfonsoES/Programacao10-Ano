@@ -7,7 +7,7 @@ int main()
 	int N, D;
 	int Cont = 0;
 
-	cout << "Escolhe um núero: ";
+	cout << "Escolhe um nÃºero: ";
 	cin >> N;
 
 	D = N;
@@ -25,10 +25,10 @@ int main()
 	}
 	if (Cont == 2)
 	{
-		cout << "O numero é Primo";
+		cout << "O numero Ã© Primo";
 	}
 	else
 	{
-		cout << "O numero não é Primo";
+		cout << "O numero nÃ£o Ã© Primo";
 	}
 }
