@@ -9,16 +9,16 @@ int main()
 
 	do
 	{
-		cout << "Escolhe um número: ";
+		cout << "Escolhe um nÃºmero: ";
 		cin >> num;
 
 		if (num>0)
 		{
-			cout << "O número é positivo!\n";
+			cout << "O nÃºmero Ã© positivo!\n";
 		}
 		else if (num<0)
 		{
-			cout << "O número é negativo!\n";
+			cout << "O nÃºmero Ã© negativo!\n";
 		}
 		else
 		{
