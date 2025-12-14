@@ -9,16 +9,16 @@ int main()
 
 	do
 	{
-		cout << "Escolhe um número: ";
+		cout << "Escolhe um nÃºmero: ";
 			cin >> num;
 
 		if (num % 2 == 0)
 		{
-			cout<<"O número é par!\n";
+			cout<<"O nÃºmero Ã© par!\n";
 		}
 		else
 		{
-			cout << "O número é impar!\n";
+			cout << "O nÃºmero Ã© impar!\n";
 		}
 	} while (num !=0);
 
